@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Mac - API",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "cwd": "/Users/renato/Documents/openweathermap-python-automationAPI",
+            "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@wip"]
+        },
+        {
+            "name": "Win - Apple Definition",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "cwd": "C:/Users/renat/Desktop/adidasFront",
+            "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@wip"]
+        }
+    ]
+}
