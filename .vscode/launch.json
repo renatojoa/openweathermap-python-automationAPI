@@ -5,13 +5,30 @@
     "version": "0.2.0",
     "configurations": [
 
+
         {
-            "name": "Mac - API",
+            "name": "Mac - API - Event Status",
             "type": "python",
             "request": "launch",
             "console": "integratedTerminal",
             "cwd": "/Users/renato/Documents/openweathermap-python-automationAPI",
-            "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@wip"]
+            "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@runEventStatus"]
+        },
+        {
+            "name": "Windows - API - Event Status",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "cwd": "C:/Users/renat/Desktop/openweathermap-python-automationAPI",
+            "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@runEventStatus"]
+        },
+        {
+            "name": "Mac - API - Weather",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "cwd": "/Users/renato/Documents/openweathermap-python-automationAPI",
+            "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@runWeather"]
         },
         {
             "name": "Win - Apple Definition",

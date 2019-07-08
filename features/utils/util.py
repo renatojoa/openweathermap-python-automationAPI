@@ -1,5 +1,5 @@
 class UtilMethods:
-    def weatherIDContent(id):
+    def weatherIDContent(self, id):
         return {
         '200':['Thunderstorm','thunderstorm with light rain'],
         '201':['Thunderstorm','thunderstorm with rain'],
