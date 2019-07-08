@@ -7,27 +7,36 @@ import time
 
 use_step_matcher("re")
 #REQUESTS
-@given('I submit request on url using (?P<city>.+) successfully')
+@given('I submit request using (?P<city>.+) successfully')
 def step_impl(context, city):
     url = context.config.userdata['base_url'] + city + '&appid=' + context.config.userdata['app_id'] + context.config.userdata['unitC']
     context.response = requests.get(url).json()
     assert context.response['cod'] == 200
     assert context.response['name'] == city
 
-@given('I submit request on url using (?P<city>.+) with no APIKEY')
+@given('I submit request using the (?P<city>.+) and (?P<country>.+)')
+def step_impl(context, city, country):
+    url = context.config.userdata['base_url'] + city + ',' + country + '&appid=' + context.config.userdata['app_id'] + context.config.userdata['unitC']
+    print(url)
+    context.response = requests.get(url).json()
+    assert context.response['cod'] == 200
+    assert context.response['name'] == city
+    assert context.response['sys']['country'] == 'GB'
+
+@given('I submit request using (?P<city>.+) with no APIKEY')
 def step_impl(context, city):
     url = context.config.userdata['base_url'] + city + context.config.userdata['unitC']
     context.response = requests.get(url).json()
     assert context.response['cod'] == 401
 
-@given('I submit request on url with bad request')
+@given('I submit request with bad request')
 def step_impl(context):
     url = context.config.userdata['base_url'] + '&appid=' + context.config.userdata['app_id']
     context.response = requests.get(url).json()
     print(context.response['cod'])
     assert context.response['cod'] == str(400)
 
-@given('I submit request on url using (?P<city>.+) with no result')
+@given('I submit request using (?P<city>.+) with no result')
 def step_impl(context, city):
     url = context.config.userdata['base_url'] + city + '&appid=' + context.config.userdata['app_id']
     context.response = requests.get(url).json()
