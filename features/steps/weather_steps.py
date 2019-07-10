@@ -24,15 +24,16 @@ def step_impl(context, city, country):
     assert context.response['name'] == city
     assert context.response['sys']['country'] == country
 
-@given('I submit request using cityID (?P<cityID>.+)')
+@given('I submit request using cityID: (?P<cityID>.+)')
 def step_impl(context, cityID):
     url = context.config.userdata['base_url'] + '?id=' + cityID + context.config.userdata['app_id'] + context.config.userdata['unitC']
     print(url)
     context.response = requests.get(url).json()
+    print(context.response['id'])
     assert context.response['cod'] == 200
     assert context.response['id'] == float(cityID)
 
-@given('I submit request using lat/long (?P<lat>.+)/(?P<lon>.+)')
+@given('I submit request using lat/long: (?P<lat>.+)/(?P<lon>.+)')
 def step_impl(context, lat, lon):
     url = context.config.userdata['base_url'] + context.config.userdata['lat'] + lat + context.config.userdata['lon'] + lon + context.config.userdata['app_id'] + context.config.userdata['unitC']
     print(url)
@@ -41,13 +42,13 @@ def step_impl(context, lat, lon):
     assert context.response['coord']['lon'] == float(lon)
     assert context.response['coord']['lat'] == float(lat)
 
-@given('I submit request using zipcode (?P<zip>.+)')
+@given('I submit request using zipcode: (?P<zip>.+)')
 def step_impl(context, zip):
     url = context.config.userdata['base_url'] + context.config.userdata['zip'] + zip + context.config.userdata['app_id'] + context.config.userdata['unitC']
     print(url)
     context.response = requests.get(url).json()
     assert context.response['cod'] == 200
-
+            
 #END TYPES SEARCH
 
 #REQUEST
@@ -104,15 +105,10 @@ def step_impl(context, humidity):
     assert context.response['main']['humidity'] == float(humidity)
 #END MAIN
 
-#VISIBILITY
-@Then('I check the visibility: (?P<visibility>.+)')
-def step_impl(context, visibility):
-    assert context.response['visibility'] == float(visibility)
-#END VISIBILITY
-
 #WIND
 @Then('I check wind speed: (?P<windSpeed>.+)')
 def step_impl(context, windSpeed):
+    print(context.response['wind']['speed'])
     assert context.response['wind']['speed'] == float(windSpeed)
 #END WIND
 
