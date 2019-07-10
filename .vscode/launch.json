@@ -4,8 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-
         {
             "name": "Mac - API - Event Status",
             "type": "python",
@@ -19,7 +17,7 @@
             "type": "python",
             "request": "launch",
             "console": "integratedTerminal",
-            "cwd": "C:/Users/renat/Desktop/openweathermap-python-automationAPI",
+            "cwd": "C:/Users/renat/Documents/GitHub/openweathermap-python-automationAPI",
             "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@runEventStatus"]
         },
         {
@@ -27,7 +25,15 @@
             "type": "python",
             "request": "launch",
             "console": "integratedTerminal",
-            "cwd": "/Users/renato/Documents/openweathermap-python-automationAPI",
+            "program": "/Users/renato/Documents/openweathermap-python-automationAPI",
+            "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@runWeather"]
+        },
+        {
+            "name": "Windows - API - Weather",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "cwd": "C:/Users/renat/Documents/GitHub/openweathermap-python-automationAPI",
             "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@runWeather"]
         },
         {
