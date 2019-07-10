@@ -13,7 +13,7 @@ Feature: Adidas Challenge API
 
    Examples:
     | city     | temp  | minTemp | maxTemp | pressure | humidity | weatherID | windSpeed  | cloud |
-    | Zaragoza | 25.02 | 5.95   | 5.95     | 1026.02  | 97       | 800       | 1.25       | 0    |
+    | Zaragoza | 32.06 | 20.55   | 20.55   | 1026.02  | 97       | 800       | 1.25       | 0    |
 
  Scenario Outline: Check weather in <city> and <country>
     Given I submit request using City: <city> and Country: <country>
@@ -27,7 +27,7 @@ Feature: Adidas Challenge API
 
    Examples:
     | city     | country | temp  | minTemp | maxTemp | pressure | humidity | weatherID | windSpeed  | cloud |
-    | Recife   | BR      | 9.45  | 9.45    | 9.45    | 1026.02  | 97       | 800       | 1.25       | 0     |
+    | Recife   | BR      | 9.45  | 13.01    | 13.01    | 1026.02  | 97       | 800       | 1.25       | 0     |
 
  Scenario Outline: Check weather by cityID <cityID>
     Given I submit request using cityID: <cityID>
@@ -39,9 +39,9 @@ Feature: Adidas Challenge API
 #     Then I check wind speed: <windSpeed>
 #     Then I check cloud percent: <cloud>%
 
-#    Examples:
-#     | cityID  | city    | temp  | minTemp | maxTemp | pressure | humidity | weatherID | windSpeed  | cloud |
-#     | 2643743 | London  | 15.22 | 13.33   | 17.22   | 1019     | 97       | 800       | 1.25       | 0     |
+   Examples:
+    | cityID  | city    | temp  | minTemp | maxTemp | pressure | humidity | weatherID | windSpeed  | cloud |
+    | 2643743 | London  | 15.22 | 13.33   | 17.22   | 1015     | 53       | 800       | 1.25       | 0     |
 
  Scenario Outline: Check weather by Lat/Long: <lat>/<lon>
     Given I submit request using lat/long: <lat>/<lon>
@@ -55,7 +55,7 @@ Feature: Adidas Challenge API
 
    Examples:
     | lat    | lon    | temp  | minTemp | maxTemp | pressure | humidity | weatherID | windSpeed  | cloud |
-    | -28.48 | -48.99 | 15.22 | 13.33   | 17.22   | 1016.76  | 90       | 803       | 1.25       | 0     |
+    | -28.48 | -48.99 | 15.22 | 13.33   | 17.22   | 1016.76  | 90       | 803       | 0.35       | 62    |
 
  Scenario Outline: Check weather by zipcode: <zip>
     Given I submit request using zipcode: <zip>
@@ -69,4 +69,4 @@ Feature: Adidas Challenge API
 
    Examples:
     | zip      | temp  | minTemp | maxTemp | pressure | humidity | weatherID | windSpeed  | cloud |
-    | 50018,ES | 15.22 | 13.33   | 17.22   | 1016.76  | 74       | 803       | 3.1        | 0     |
+    | 50018,ES | 15.22 | 13.33   | 17.22   | 1016.76  | 74       | 803       | 4.6        | 0     |
