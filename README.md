@@ -27,24 +27,24 @@
 
 ## Example:
 1. what should eventStatus.feature do:
-    Submit request to obtain: 
-        1.2 Status code: 200
-        1.3 Status code: 400
-        1.4 Status code: 401
-        1.5 Status code: 404
+    > Submit request to obtain: 
+    >    1.2 Status code: 200
+    >    1.3 Status code: 400
+    >    1.4 Status code: 401
+    >    1.5 Status code: 404
 
 2. what should weatherCheck.feature do:
-    Submit request to obtain: 
-        2.1 Check weather in using city param
-               http://api.openweathermap.org/data/2.5/weather?q=Zaragoza&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
-        2.2 Check weather in using city and country params
-                http://api.openweathermap.org/data/2.5/weather?q=Recife,BR&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
-        2.3 Check weather in using city ID param
-                http://api.openweathermap.org/data/2.5/weather?id=2643743&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
-        2.4 Check weather in using city lat/long param
-                http://api.openweathermap.org/data/2.5/weather?&lat=-28.48&lon=-48.99&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
-        2.5 Check weather in using city zipcode param
-                http://api.openweathermap.org/data/2.5/weather?zip=50018,ES&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
+    > Submit request to obtain: 
+    >    2.1 Check weather in using city param
+    >           http://api.openweathermap.org/data/2.5/weather?q=Zaragoza&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
+    >    2.2 Check weather in using city and country params
+    >            http://api.openweathermap.org/data/2.5/weather?q=Recife,BR&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
+    >    2.3 Check weather in using city ID param
+    >            http://api.openweathermap.org/data/2.5/weather?id=2643743&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
+    >    2.4 Check weather in using city lat/long param
+    >            http://api.openweathermap.org/data/2.5/weather?&lat=-28.48&lon=-48.99&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
+    >    2.5 Check weather in using city zipcode param
+    >            http://api.openweathermap.org/data/2.5/weather?zip=50018,ES&appid=bbee494935c2d1479dfc8b2e5658791b&units=metric
 
 >  Given the constant weather changes, I extremely recommend a variables (example) update on feature file for a better experience.
 
