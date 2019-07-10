@@ -2,7 +2,7 @@
 Feature: Adidas Challenge API
 
   Scenario Outline: Check status code: 200
-    Given I submit request using <city> successfully
+    Given I submit request using City: <city> successfully
 
       Examples:
         | city     | 

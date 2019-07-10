@@ -60,14 +60,14 @@ def step_impl(context, city):
 
 @given('I submit request with bad request')
 def step_impl(context):
-    url = context.config.userdata['base_url'] + context.config.userdata['app_id']
+    url = context.config.userdata['base_url'] + '?q=' + context.config.userdata['app_id']
     context.response = requests.get(url).json()
     print(context.response['cod'])
     assert context.response['cod'] == str(400)
 
 @given('I submit request using (?P<city>.+) with no result')
 def step_impl(context, city):
-    url = context.config.userdata['base_url'] + city + context.config.userdata['app_id']
+    url = context.config.userdata['base_url'] + '?q=' + city + context.config.userdata['app_id'] + context.config.userdata['unitC']
     context.response = requests.get(url).json()
     assert context.response['cod'] == str(404)
 #END REQUEST
