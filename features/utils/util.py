@@ -57,8 +57,8 @@ class UtilMethods:
         '781':['Tornado','tornado'],
 
         '800':['Clear','clear sky'],
-        '801':['Clouds','few clouds: 11-25%'],
-        '802':['Clouds','scattered clouds: 25-50%'],
-        '803':['Clouds','broken clouds: 51-84%'],
-        '804':['Clouds','overcast clouds: 85-100%'],
+        '801':['Clouds','few clouds'],
+        '802':['Clouds','scattered clouds'],
+        '803':['Clouds','broken clouds'],
+        '804':['Clouds','overcast clouds']
     }[id]

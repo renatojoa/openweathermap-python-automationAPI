@@ -25,7 +25,7 @@
             "type": "python",
             "request": "launch",
             "console": "integratedTerminal",
-            "program": "/Users/renato/Documents/openweathermap-python-automationAPI",
+            "program": "/Users/renato/openweathermap-python-automationAPI",
             "args": ["-m", "behave", "--no-capture", "--no-skipped", "--tags=@runWeather"]
         },
         {
